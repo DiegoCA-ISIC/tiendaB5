@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card view</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css ">
+    <style>
+      body{
+        background-color: #e1e1e1;
+      }
+
+      .carousel-item {
+         height: 65vh;
+         min-height: 300px;
+         background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      .card-columns .card {
+        display: inline-block;
+        width: 100%;
+      }
+
+    .card-img-top {
+          width: 100%;
+          height: 200px !important; 
+          border-top-left-radius: calc(0.25rem - 1px);
+          border-top-right-radius: calc(0.25rem - 1px);
+      }
+
+    </style>
+</head>
+
+<body>
+  
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <table class="table" id="tabla_carrito">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tr>
+
+        </tr>
+      </table>
+    </div>
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                  </svg>
+                  Carrito</button>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+    <div class="conteiner">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner p-5 ">
+                      <div class="carousel-item active m-auto">
+                        <img src="img/blue-jeans-g29b55122f_1920.jpg" class=" w-100" alt="h-50" >
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/luggage-gcab9658f3_1920.jpg" class=" w-100" alt="h-50" >
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/traveler-g573986169_1920.jpg" class=" w-100" alt="h-50" >
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </div>
+        <!--fin del row del carrusel-->
+
+    </div>
+  
+    <div class="row dinamico justify-content-center align-content-center mt-5">
+      <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
+    "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+      //objeto global que será el carrito
+     
+      let carrito=[];
+
+            $.ajax ({
+            
+            url: "https://fakestoreapi.com/products?limit=9",
+            success:function(json){
+              $(".dinamico").empty();
+                json.forEach(element => {
+                  
+                    $(".dinamico").append(
+
+                        `
+                        <div class="card col-3 p-1 m-1">    
+                         <img src="${element.image}" class="card-img-center" alt="50px">
+                            <div class="card-body">
+                            <h5 class="card-title titulo">${element.title}</h5>
+                            <p class="card-text text-truncate">${element.description}</p>
+                            <p class="card-text text-primary precip">$${element.price}</p>
+                            <a href="#" class="btn btn-primary" onclick="insertar(\'${element.image}\',${element.price})">Añadir al Carrito <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg></a>
+                            </div>
+                        </div>
+                         `
+                         
+                    );
+                    console.log(element.title)
+
+                });
+                console.log(json)
+            }
+    }).fail(function(){
+      
+    });
+
+    function insertar(image, price){
+      
+      event.preventDefault()
+      carrito.push({
+        "thumb":image,
+        "precio":price
+      })
+      alert("Elemento añadido");
+
+      renderCarro();
+      
+    }
+
+    function eliminarProducto(pos){
+      carrito.splice(pos, 1);
+      alert("producto eliminado")
+      renderCarro();
+    }
+
+    function renderCarro(){
+      let precioTotal=0;
+      let i=0;
+      $("#tabla_carrito").empty();
+      carrito.forEach(item => {
+        precioTotal+=item.precio
+        $("#tabla_carrito").append(
+        `<tr>
+          <td> <img src = "${item.thumb}" alt="producto" width="30%" height="20%"/> </td>
+          <td>$${item.precio}</td>
+          <td>
+            <button class="btn btn-danger" onclick="eliminarProducto(${i})"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+           <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+           </svg></button>
+           </td>
+          
+         </tr>`
+      )
+      i++;
+      });
+      
+      $("#tabla_carrito").append(
+        `<tr>
+          <td>TOTAL</td>
+          <td class="text-success">$${precioTotal}</td>
+         </tr>`
+      )
+      console.log(carrito);
+    }
+    </script>
+</body>
+</html>
